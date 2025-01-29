@@ -10,6 +10,6 @@ control 'apache-01' do
 
   # Get Apache2 version and check if it's within a valid range
   describe command('apache2 -v') do
-    its('stdout') { should match /Apache\/2\.\d+\.\d+/ }
+    its('stdout') { should match(/Apache\/2\.\d+\.\d+/) }
   end
 end
